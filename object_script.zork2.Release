@@ -7,6 +7,7 @@ release/main.o
 release/mainwindow.o
 release/mummy.o
 release/mytimer.o
+release/pirate.o
 release/player.o
 release/room.o
 release/vampire.o

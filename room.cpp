@@ -64,6 +64,13 @@ void Room::setalien(bool alie)
     else
         alien=false;
 }
+void Room::setpirate(bool pirat)
+{
+    if(pirat)
+        pirate=true;
+    else
+        pirate=false;
+}
 vector<string> Room::exitString()
 {
     vector<string> list;
@@ -101,6 +108,11 @@ bool Room::dragonInRoom()
 bool Room::alienInRoom()
 {
     return alien;
+}
+
+bool Room::pirateInRoom()
+{
+    return pirate;
 }
 
 string Room::getDescription()
@@ -192,6 +204,11 @@ bool Room::getalienIsDead()
 void Room::setalienIsDead(bool dead)
 {
     this->alienIsDead=dead;
+}
+
+void Room::setpirateIsDead(bool dead)
+{
+    this->pirateIsDead=dead;
 }
 
 bool Room::getCanEnter()

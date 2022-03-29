@@ -231,6 +231,12 @@ void Background::addToScene(){
         timer = new MyTimer(zork1->valien, player, zork1->currentRoom);
         this->addItem(zork1->valien);
     }
+    else if(zork1->currentRoom->pirateInRoom()){
+        zork1->vpirate->setVisible(true);
+        zork1->vpirate->setFocus();
+        timer = new MyTimer(zork1->vpirate, player, zork1->currentRoom);
+        this->addItem(zork1->vpirate);
+    }
     this->addItem(cave);
 
 }
@@ -317,6 +323,11 @@ void Background::clearBackground(){
         label6->deleteLater();
         dell6=0;
     }
+    if(dell7)
+    {
+        label7->deleteLater();
+        dell7=0;
+    }
     if(zork1->currentRoom->ghostInRoom()){
         this->removeItem(zork1->vghost);
     }
@@ -335,6 +346,9 @@ void Background::clearBackground(){
     else if(zork1->currentRoom->alienInRoom()){
         this->removeItem(zork1->valien);
     }
+    else if(zork1->currentRoom->pirateInRoom()){
+        this->removeItem(zork1->vpirate);
+    }
     this->removeItem(cave);
 
     zork1->vghost->resetHealth();
@@ -343,6 +357,7 @@ void Background::clearBackground(){
     zork1->vmummy->resetHealth();
     zork1->vdragon->resetHealth();
     zork1->valien->resetHealth();
+    zork1->vpirate->resetHealth();
     if(zork1->currentRoom->ghostInRoom()){
         timer->stopTimer();
         timer->deleteLater();
@@ -364,6 +379,10 @@ void Background::clearBackground(){
         timer->deleteLater();
     }
     else if(zork1->currentRoom->alienInRoom()){
+        timer->stopTimer();
+        timer->deleteLater();
+    }
+    else if(zork1->currentRoom->pirateInRoom()){
         timer->stopTimer();
         timer->deleteLater();
     }
@@ -499,6 +518,28 @@ void Background::keyPressEvent(QKeyEvent *event)
                         dell6=1;
                         this->addWidget(label6);
                         zork1->h->setCanEnter(true);
+                    }
+                }
+        }
+    }
+    else if(zork1->currentRoom->pirateInRoom()){
+        if(event->key()==Qt::Key_X)
+        {
+                if(zork1->vpirate->scenePos()==QPointF(470,200)){
+                    zork1->vpirate->decreaseHealthByAttack(10);
+                    zork1->vpirate->setPixmap(QPixmap(":/Images/pirateattack.png"));
+                    zork1->vpirate->z=1;
+                    if(zork1->vpirate->getHealth()<=0){
+                        zork1->currentRoom->setpirate(false);
+                        label7 = new QLabel();
+                        label7->setText("E");
+                        QFont font = label7->font();
+                        font.setPointSize(72);
+                        label7->setFont(font);
+                        label7->move(450,100);
+                        dell7=1;
+                        this->addWidget(label7);
+                        zork1->c->setCanEnter(true);
                     }
                 }
         }

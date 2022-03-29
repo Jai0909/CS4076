@@ -18,6 +18,7 @@ SOURCES += \
     mainwindow.cpp \
     mummy.cpp \
     mytimer.cpp \
+    pirate.cpp \
     player.cpp \
     room.cpp \
     vampire.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     mummy.h \
     mytimer.h \
     myvector.h \
+    pirate.h \
     player.h \
     room.h \
     vampire.h \
