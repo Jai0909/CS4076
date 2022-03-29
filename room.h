@@ -17,12 +17,14 @@ private:
     bool zombie = false;
     bool mummy = false;
     bool dragon = false;
+    bool alien = false;
     string description;
     bool ghostIsDead=false;
     bool vampireIsDead=false;
     bool zombieIsDead=false;
     bool mummyIsDead=false;
     bool dragonIsDead=false;
+    bool alienIsDead=false;
     bool canEnter;
 
 public:
@@ -33,6 +35,7 @@ public:
     void setzombie(bool);
     void setmummy(bool);
     void setdragon(bool);
+    void setalien(bool);
     vector<string> exitString();
     string getDescription();
     bool ghostInRoom();
@@ -40,6 +43,7 @@ public:
     bool zombieInRoom();
     bool mummyInRoom();
     bool dragonInRoom();
+    bool alienInRoom();
     vector<Room> rooms();
     Room* nextRoom(string direction);
     bool getghostIsDead();
@@ -52,6 +56,8 @@ public:
     void setmummyIsDead(bool dead);
     bool getdragonIsDead();
     void setdragonIsDead(bool dead);
+    bool getalienIsDead();
+    void setalienIsDead(bool dead);
     bool getCanEnter();
     void setCanEnter(bool);
 };

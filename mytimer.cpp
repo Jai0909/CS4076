@@ -7,6 +7,7 @@
 #include <zombie.h>
 #include <mummy.h>
 #include <dragon.h>
+#include <alien.h>
 #include <QSignalMapper>
 
 MyTimer::MyTimer(Character * enemy, Player * p, Room* r)
@@ -61,6 +62,10 @@ void MyTimer::villianSlot()
         if(room->dragonInRoom()==true){
             room->setdragon(false);
             room->setdragonIsDead(true);
+        }
+        if(room->alienInRoom()==true){
+            room->setalien(false);
+            room->setalienIsDead(true);
         }
         stopTimer();
         this->deleteLater();

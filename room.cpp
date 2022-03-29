@@ -57,6 +57,13 @@ void Room::setdragon(bool drag)
     else
         dragon=false;
 }
+void Room::setalien(bool alie)
+{
+    if(alie)
+        alien=true;
+    else
+        alien=false;
+}
 vector<string> Room::exitString()
 {
     vector<string> list;
@@ -89,6 +96,11 @@ bool Room::mummyInRoom()
 bool Room::dragonInRoom()
 {
     return dragon;
+}
+
+bool Room::alienInRoom()
+{
+    return alien;
 }
 
 string Room::getDescription()
@@ -170,6 +182,16 @@ bool Room::getdragonIsDead()
 void Room::setdragonIsDead(bool dead)
 {
     this->dragonIsDead=true;
+}
+
+bool Room::getalienIsDead()
+{
+    return alienIsDead;
+}
+
+void Room::setalienIsDead(bool dead)
+{
+    this->alienIsDead=true;
 }
 
 bool Room::getCanEnter()

@@ -9,6 +9,7 @@
 #include "zombie.h"
 #include "mummy.h"
 #include "dragon.h"
+#include "alien.h"
 #include "room.h"
 #include "mytimer.h"
 #include "player.h"
@@ -47,7 +48,7 @@ public:
     void keyPressEvent(QKeyEvent *event);
     void close();
 
-    int delB5=0;
+
 public slots:
     void on_button1_clicked();
     void on_button2_clicked();

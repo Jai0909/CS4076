@@ -225,6 +225,12 @@ void Background::addToScene(){
         timer = new MyTimer(zork1->vdragon, player, zork1->currentRoom);
         this->addItem(zork1->vdragon);
     }
+    else if(zork1->currentRoom->alienInRoom()){
+        zork1->valien->setVisible(true);
+        zork1->valien->setFocus();
+        timer = new MyTimer(zork1->valien, player, zork1->currentRoom);
+        this->addItem(zork1->valien);
+    }
     this->addItem(cave);
 
 }
@@ -306,6 +312,11 @@ void Background::clearBackground(){
         label5->deleteLater();
         dell5=0;
     }
+    if(dell6)
+    {
+        label6->deleteLater();
+        dell6=0;
+    }
     if(zork1->currentRoom->ghostInRoom()){
         this->removeItem(zork1->vghost);
     }
@@ -321,7 +332,9 @@ void Background::clearBackground(){
     else if(zork1->currentRoom->dragonInRoom()){
         this->removeItem(zork1->vdragon);
     }
-
+    else if(zork1->currentRoom->alienInRoom()){
+        this->removeItem(zork1->valien);
+    }
     this->removeItem(cave);
 
     zork1->vghost->resetHealth();
@@ -329,6 +342,7 @@ void Background::clearBackground(){
     zork1->vzombie->resetHealth();
     zork1->vmummy->resetHealth();
     zork1->vdragon->resetHealth();
+    zork1->valien->resetHealth();
     if(zork1->currentRoom->ghostInRoom()){
         timer->stopTimer();
         timer->deleteLater();
@@ -346,6 +360,10 @@ void Background::clearBackground(){
         timer->deleteLater();
     }
     else if(zork1->currentRoom->dragonInRoom()){
+        timer->stopTimer();
+        timer->deleteLater();
+    }
+    else if(zork1->currentRoom->alienInRoom()){
         timer->stopTimer();
         timer->deleteLater();
     }
@@ -459,6 +477,28 @@ void Background::keyPressEvent(QKeyEvent *event)
                         dell5=1;
                         this->addWidget(label5);
                         zork1->f->setCanEnter(true);
+                    }
+                }
+        }
+    }
+    else if(zork1->currentRoom->alienInRoom()){
+        if(event->key()==Qt::Key_X)
+        {
+                if(zork1->valien->scenePos()==QPointF(470,200)){
+                    zork1->valien->decreaseHealthByAttack(10);
+                    zork1->valien->setPixmap(QPixmap(":/Images/alienattack.png"));
+                    zork1->valien->z=1;
+                    if(zork1->valien->getHealth()<=0){
+                        zork1->currentRoom->setalien(false);
+                        label6 = new QLabel();
+                        label6->setText("N");
+                        QFont font = label6->font();
+                        font.setPointSize(72);
+                        label6->setFont(font);
+                        label6->move(450,100);
+                        dell6=1;
+                        this->addWidget(label6);
+                        zork1->h->setCanEnter(true);
                     }
                 }
         }

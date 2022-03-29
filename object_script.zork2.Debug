@@ -1,3 +1,4 @@
+debug/alien.o
 debug/background.o
 debug/character.o
 debug/dragon.o
