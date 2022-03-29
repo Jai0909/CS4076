@@ -1,0 +1,16 @@
+release/background.o
+release/character.o
+release/ghost.o
+release/main.o
+release/mainwindow.o
+release/mummy.o
+release/mytimer.o
+release/player.o
+release/room.o
+release/vampire.o
+release/zombie.o
+release/zork.o
+release/qrc_images.o
+release/moc_background.o
+release/moc_mainwindow.o
+release/moc_mytimer.o

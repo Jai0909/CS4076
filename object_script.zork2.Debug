@@ -1,0 +1,16 @@
+debug/background.o
+debug/character.o
+debug/ghost.o
+debug/main.o
+debug/mainwindow.o
+debug/mummy.o
+debug/mytimer.o
+debug/player.o
+debug/room.o
+debug/vampire.o
+debug/zombie.o
+debug/zork.o
+debug/qrc_images.o
+debug/moc_background.o
+debug/moc_mainwindow.o
+debug/moc_mytimer.o

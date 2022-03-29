@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>cave.jpg</file>
+        <file>ghost.png</file>
+        <file>ghostattack.png</file>
+        <file>vampire.jpg</file>
+        <file>vampireattack.jpg</file>
+        <file>zombie.jpg</file>
+        <file>zombieattack.jpg</file>
+        <file>dragon.jpg</file>
+        <file>dragonattack.jpg</file>
+        <file>alien.png</file>
+        <file>alienattack.png</file>
+        <file>monster.png</file>
+        <file>monsterattack.png</file>
+        <file>mummy.png</file>
+        <file>mummyattack.png</file>
+        <file>pirate.png</file>
+        <file>pirateattack.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
