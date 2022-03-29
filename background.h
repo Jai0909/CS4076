@@ -8,6 +8,7 @@
 #include "vampire.h"
 #include "zombie.h"
 #include "mummy.h"
+#include "dragon.h"
 #include "room.h"
 #include "mytimer.h"
 #include "player.h"

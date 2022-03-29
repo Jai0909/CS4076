@@ -2,6 +2,9 @@
 #define MYTIMER_H
 #include "ghost.h"
 #include "vampire.h"
+#include "zombie.h"
+#include "mummy.h"
+#include "dragon.h"
 #include "player.h"
 #include "room.h"
 #include "character.h"
@@ -24,6 +27,9 @@ private:
     Character * villian;
     ghost * vghost;
     vampire * vvampire;
+    zombie * vzombie;
+    mummy * vmummy;
+    dragon * vdragon;
     Room * room;
     int x=0;
     int health=0;

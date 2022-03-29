@@ -4,6 +4,9 @@
 #include <background.h>
 #include <ghost.h>
 #include <vampire.h>
+#include <zombie.h>
+#include <mummy.h>
+#include <dragon.h>
 #include <QSignalMapper>
 
 MyTimer::MyTimer(Character * enemy, Player * p, Room* r)
@@ -50,6 +53,14 @@ void MyTimer::villianSlot()
         if(room->zombieInRoom()==true){
             room->setzombie(false);
             room->setzombieIsDead(true);
+        }
+        if(room->mummyInRoom()==true){
+            room->setmummy(false);
+            room->setmummyIsDead(true);
+        }
+        if(room->dragonInRoom()==true){
+            room->setdragon(false);
+            room->setdragonIsDead(true);
         }
         stopTimer();
         this->deleteLater();

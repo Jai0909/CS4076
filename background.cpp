@@ -219,6 +219,12 @@ void Background::addToScene(){
         timer = new MyTimer(zork1->vmummy, player, zork1->currentRoom);
         this->addItem(zork1->vmummy);
     }
+    else if(zork1->currentRoom->dragonInRoom()){
+        zork1->vdragon->setVisible(true);
+        zork1->vdragon->setFocus();
+        timer = new MyTimer(zork1->vdragon, player, zork1->currentRoom);
+        this->addItem(zork1->vdragon);
+    }
     this->addItem(cave);
 
 }
@@ -295,6 +301,11 @@ void Background::clearBackground(){
         label4->deleteLater();
         dell4=0;
     }
+    if(dell5)
+    {
+        label5->deleteLater();
+        dell5=0;
+    }
     if(zork1->currentRoom->ghostInRoom()){
         this->removeItem(zork1->vghost);
     }
@@ -307,13 +318,17 @@ void Background::clearBackground(){
     else if(zork1->currentRoom->mummyInRoom()){
         this->removeItem(zork1->vmummy);
     }
+    else if(zork1->currentRoom->dragonInRoom()){
+        this->removeItem(zork1->vdragon);
+    }
 
     this->removeItem(cave);
 
     zork1->vghost->resetHealth();
     zork1->vvampire->resetHealth();
     zork1->vzombie->resetHealth();
-     zork1->vmummy->resetHealth();
+    zork1->vmummy->resetHealth();
+    zork1->vdragon->resetHealth();
     if(zork1->currentRoom->ghostInRoom()){
         timer->stopTimer();
         timer->deleteLater();
@@ -327,6 +342,10 @@ void Background::clearBackground(){
         timer->deleteLater();
     }
     else if(zork1->currentRoom->mummyInRoom()){
+        timer->stopTimer();
+        timer->deleteLater();
+    }
+    else if(zork1->currentRoom->dragonInRoom()){
         timer->stopTimer();
         timer->deleteLater();
     }
@@ -422,7 +441,28 @@ void Background::keyPressEvent(QKeyEvent *event)
                 }
         }
     }
-
+    else if(zork1->currentRoom->dragonInRoom()){
+        if(event->key()==Qt::Key_X)
+        {
+                if(zork1->vdragon->scenePos()==QPointF(470,200)){
+                    zork1->vdragon->decreaseHealthByAttack(10);
+                    zork1->vdragon->setPixmap(QPixmap(":/Images/dragonattack.jpg"));
+                    zork1->vdragon->z=1;
+                    if(zork1->vdragon->getHealth()<=0){
+                        zork1->currentRoom->setdragon(false);
+                        label5 = new QLabel();
+                        label5->setText("E");
+                        QFont font = label5->font();
+                        font.setPointSize(72);
+                        label5->setFont(font);
+                        label5->move(450,100);
+                        dell5=1;
+                        this->addWidget(label5);
+                        zork1->f->setCanEnter(true);
+                    }
+                }
+        }
+    }
 }
 
 void Background::close()

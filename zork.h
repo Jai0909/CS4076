@@ -11,6 +11,7 @@
 #include "vampire.h"
 #include "zombie.h"
 #include "mummy.h"
+#include "dragon.h"
 
 class Zork : public QGraphicsView
 {
@@ -24,6 +25,7 @@ public:
     void createvampire();
     void createzombie();
     void createmummy();
+    void createdragon();
     void createExits();
     Room * createRooms();
 
@@ -32,6 +34,7 @@ private:
     vampire * vvampire;
     zombie * vzombie;
     mummy * vmummy;
+    dragon * vdragon;
     Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j;
     Room *currentRoom;
     myVector<Room*> rooms;

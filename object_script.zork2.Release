@@ -1,5 +1,6 @@
 release/background.o
 release/character.o
+release/dragon.o
 release/ghost.o
 release/main.o
 release/mainwindow.o

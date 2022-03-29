@@ -1,5 +1,6 @@
 debug/background.o
 debug/character.o
+debug/dragon.o
 debug/ghost.o
 debug/main.o
 debug/mainwindow.o

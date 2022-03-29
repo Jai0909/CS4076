@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     background.cpp \
     character.cpp \
+    dragon.cpp \
     ghost.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 HEADERS += \
     background.h \
     character.h \
+    dragon.h \
     ghost.h \
     mainwindow.h \
     mummy.h \
@@ -51,10 +53,8 @@ RESOURCES += \
     images.qrc
 
 DISTFILES += \
-    .gitignore \
     Treasure.jpeg \
     attack.png \
-    cave.jpg \
     dragon.png \
     dragonAttack.png \
     imgres.jpg \
@@ -64,5 +64,4 @@ DISTFILES += \
     treasure.jpg \
     vampire.png \
     vampireAttacked.png \
-    zork1.pro.user \
-    zork2.pro.user
+    zork1.pro.user

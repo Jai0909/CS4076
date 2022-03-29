@@ -10,6 +10,7 @@ Zork::Zork(QWidget *parent)
     createvampire();
     createzombie();
     createmummy();
+    createdragon();
     currentRoom=createRooms();
     createExits();
 }
@@ -21,6 +22,7 @@ Zork::~Zork()
     delete vvampire;
     delete vzombie;
     delete vmummy;
+    delete vdragon;
     delete a;
     delete b;
     delete c;
@@ -55,6 +57,10 @@ void Zork::createzombie(){
 
 void Zork::createmummy(){
     vmummy = new mummy();
+}
+
+void Zork::createdragon(){
+    vdragon = new dragon();
 }
 
 Room * Zork::createRooms(){
@@ -114,6 +120,7 @@ void Zork::createExits(){
     f->setCanEnter(false);
 
     g->setExits(NULL, NULL, NULL, f);
+    g->setdragon(true);
     g->setCanEnter(false);
 
     h->setExits(NULL, NULL, c, NULL);
