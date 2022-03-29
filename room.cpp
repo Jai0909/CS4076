@@ -171,7 +171,7 @@ bool Room::getmummyIsDead()
 
 void Room::setmummyIsDead(bool dead)
 {
-    this->mummyIsDead=true;
+    this->mummyIsDead=dead;
 }
 
 bool Room::getdragonIsDead()
@@ -181,7 +181,7 @@ bool Room::getdragonIsDead()
 
 void Room::setdragonIsDead(bool dead)
 {
-    this->dragonIsDead=true;
+    this->dragonIsDead=dead;
 }
 
 bool Room::getalienIsDead()
@@ -191,7 +191,7 @@ bool Room::getalienIsDead()
 
 void Room::setalienIsDead(bool dead)
 {
-    this->alienIsDead=true;
+    this->alienIsDead=dead;
 }
 
 bool Room::getCanEnter()
