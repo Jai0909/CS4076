@@ -71,6 +71,13 @@ void Room::setpirate(bool pirat)
     else
         pirate=false;
 }
+void Room::setmonster(bool monst)
+{
+    if(monst)
+        monster=true;
+    else
+        monster=false;
+}
 vector<string> Room::exitString()
 {
     vector<string> list;
@@ -113,6 +120,11 @@ bool Room::alienInRoom()
 bool Room::pirateInRoom()
 {
     return pirate;
+}
+
+bool Room::monsterInRoom()
+{
+    return monster;
 }
 
 string Room::getDescription()
@@ -206,9 +218,24 @@ void Room::setalienIsDead(bool dead)
     this->alienIsDead=dead;
 }
 
+bool Room::getpirateIsDead()
+{
+    return pirateIsDead;
+}
+
 void Room::setpirateIsDead(bool dead)
 {
     this->pirateIsDead=dead;
+}
+
+bool Room::getmonsterIsDead()
+{
+    return monsterIsDead;
+}
+
+void Room::setmonsterIsDead(bool dead)
+{
+    this->monsterIsDead=dead;
 }
 
 bool Room::getCanEnter()

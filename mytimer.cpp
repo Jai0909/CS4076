@@ -9,6 +9,7 @@
 #include <dragon.h>
 #include <alien.h>
 #include <pirate.h>
+#include <monster.h>
 #include <QSignalMapper>
 
 MyTimer::MyTimer(Character * enemy, Player * p, Room* r)
@@ -71,6 +72,10 @@ void MyTimer::villianSlot()
         if(room->pirateInRoom()==true){
             room->setpirate(false);
             room->setpirateIsDead(true);
+        }
+        if(room->monsterInRoom()==true){
+            room->setmonster(false);
+            room->setmonsterIsDead(true);
         }
         stopTimer();
         this->deleteLater();

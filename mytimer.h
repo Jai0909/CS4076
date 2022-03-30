@@ -7,6 +7,7 @@
 #include "dragon.h"
 #include "alien.h"
 #include "pirate.h"
+#include "monster.h"
 #include "player.h"
 #include "room.h"
 #include "character.h"
@@ -34,6 +35,7 @@ private:
     dragon * vdragon;
     alien * valien;
     pirate * vpirate;
+    monster * vmonster;
     Room * room;
     int x=0;
     int health=0;

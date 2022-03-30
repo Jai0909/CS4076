@@ -11,6 +11,7 @@
 #include "dragon.h"
 #include "alien.h"
 #include "pirate.h"
+#include "monster.h"
 #include "room.h"
 #include "mytimer.h"
 #include "player.h"

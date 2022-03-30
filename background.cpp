@@ -237,6 +237,12 @@ void Background::addToScene(){
         timer = new MyTimer(zork1->vpirate, player, zork1->currentRoom);
         this->addItem(zork1->vpirate);
     }
+    else if(zork1->currentRoom->monsterInRoom()){
+        zork1->vmonster->setVisible(true);
+        zork1->vmonster->setFocus();
+        timer = new MyTimer(zork1->vmonster, player, zork1->currentRoom);
+        this->addItem(zork1->vmonster);
+    }
     this->addItem(cave);
 
 }
@@ -328,6 +334,11 @@ void Background::clearBackground(){
         label7->deleteLater();
         dell7=0;
     }
+    if(dell8)
+    {
+        label8->deleteLater();
+        dell8=0;
+    }
     if(zork1->currentRoom->ghostInRoom()){
         this->removeItem(zork1->vghost);
     }
@@ -349,6 +360,9 @@ void Background::clearBackground(){
     else if(zork1->currentRoom->pirateInRoom()){
         this->removeItem(zork1->vpirate);
     }
+    else if(zork1->currentRoom->monsterInRoom()){
+        this->removeItem(zork1->vmonster);
+    }
     this->removeItem(cave);
 
     zork1->vghost->resetHealth();
@@ -358,6 +372,7 @@ void Background::clearBackground(){
     zork1->vdragon->resetHealth();
     zork1->valien->resetHealth();
     zork1->vpirate->resetHealth();
+    zork1->vmonster->resetHealth();
     if(zork1->currentRoom->ghostInRoom()){
         timer->stopTimer();
         timer->deleteLater();
@@ -383,6 +398,10 @@ void Background::clearBackground(){
         timer->deleteLater();
     }
     else if(zork1->currentRoom->pirateInRoom()){
+        timer->stopTimer();
+        timer->deleteLater();
+    }
+    else if(zork1->currentRoom->monsterInRoom()){
         timer->stopTimer();
         timer->deleteLater();
     }
@@ -540,6 +559,28 @@ void Background::keyPressEvent(QKeyEvent *event)
                         dell7=1;
                         this->addWidget(label7);
                         zork1->c->setCanEnter(true);
+                    }
+                }
+        }
+    }
+    else if(zork1->currentRoom->monsterInRoom()){
+        if(event->key()==Qt::Key_X)
+        {
+                if(zork1->vmonster->scenePos()==QPointF(470,200)){
+                    zork1->vmonster->decreaseHealthByAttack(10);
+                    zork1->vmonster->setPixmap(QPixmap(":/Images/monsterattack.jpg"));
+                    zork1->vmonster->z=1;
+                    if(zork1->vmonster->getHealth()<=0){
+                        zork1->currentRoom->setmonster(false);
+                        label8 = new QLabel();
+                        label8->setText("I");
+                        QFont font = label8->font();
+                        font.setPointSize(72);
+                        label8->setFont(font);
+                        label8->move(450,100);
+                        dell8=1;
+                        this->addWidget(label8);
+                        zork1->a->setCanEnter(true);
                     }
                 }
         }

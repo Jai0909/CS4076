@@ -12,11 +12,11 @@
         <file>alien.png</file>
         <file>alienattack.png</file>
         <file>monster.png</file>
-        <file>monsterattack.png</file>
         <file>mummy.png</file>
         <file>mummyattack.png</file>
         <file>pirate.png</file>
         <file>pirateattack.png</file>
+        <file>monsterattack.jpg</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

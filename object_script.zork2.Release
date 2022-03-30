@@ -5,6 +5,7 @@ release/dragon.o
 release/ghost.o
 release/main.o
 release/mainwindow.o
+release/monster.o
 release/mummy.o
 release/mytimer.o
 release/pirate.o

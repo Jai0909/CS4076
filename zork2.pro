@@ -16,6 +16,7 @@ SOURCES += \
     ghost.cpp \
     main.cpp \
     mainwindow.cpp \
+    monster.cpp \
     mummy.cpp \
     mytimer.cpp \
     pirate.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     dragon.h \
     ghost.h \
     mainwindow.h \
+    monster.h \
     mummy.h \
     mytimer.h \
     myvector.h \
