@@ -4,7 +4,6 @@
 Background::Background(Zork* zork1){
     this->zork1 = zork1;
     player=zork1->play();
-    inventoryContString = "";
     setRoomExits(zork1->currentRoom);
     setSceneRect(0,0,1000,500);
     createCave();
@@ -167,25 +166,25 @@ void Background::createMapGUI()
     this->addItem(RoomJ);
 
     if(zork1->currentRoom->getDescription()=="a")
-        RoomA->setBrush(Qt::green);
+        RoomA->setBrush(Qt::darkGreen);
     else if(zork1->currentRoom->getDescription()=="b")
-        RoomB->setBrush(Qt::green);
+        RoomB->setBrush(Qt::cyan);
     else if(zork1->currentRoom->getDescription()=="c")
-        RoomC->setBrush(Qt::green);
+        RoomC->setBrush(Qt::darkRed);
     else if(zork1->currentRoom->getDescription()=="d")
         RoomD->setBrush(Qt::green);
     else if(zork1->currentRoom->getDescription()=="e")
-        RoomE->setBrush(Qt::green);
+        RoomE->setBrush(Qt::blue);
     else if(zork1->currentRoom->getDescription()=="f")
-        RoomF->setBrush(Qt::green);
+        RoomF->setBrush(Qt::yellow);
     else if(zork1->currentRoom->getDescription()=="g")
-        RoomG->setBrush(Qt::green);
+        RoomG->setBrush(Qt::magenta);
     else if(zork1->currentRoom->getDescription()=="h")
-        RoomH->setBrush(Qt::green);
+        RoomH->setBrush(Qt::gray);
     else if(zork1->currentRoom->getDescription()=="i")
-        RoomI->setBrush(Qt::green);
+        RoomI->setBrush(Qt::red);
     else if(zork1->currentRoom->getDescription()=="j")
-        RoomJ->setBrush(Qt::green);
+        RoomJ->setBrush(Qt::black);
 }
 
 void Background:: addText(){
@@ -243,11 +242,41 @@ void Background::addToScene(){
         timer = new MyTimer(zork1->vmonster, player, zork1->currentRoom);
         this->addItem(zork1->vmonster);
     }
+    if(zork1->currentRoom->getDescription()=="j"){
+        label9 = new QLabel();
+        label9->setText("PRESS X TO KILL");
+        QFont font = label9->font();
+        font.setPointSize(50);
+        label9->setFont(font);
+        label9->move(350,100);
+        dell9=1;
+        this->addWidget(label9);
+    }
+    if(zork1->currentRoom->getDescription()=="a"){
+        label10 = new QLabel();
+        label11 = new QLabel();
+        lineedit = new QLineEdit();
+        label10->setText("YOU HAVE 5 ATTEMPTS LEFT");
+        QFont font = label10->font();
+        font.setPointSize(20);
+        label10->setFont(font);
+        label10->move(550,200);
+        QFont font1 = label11->font();
+        font1.setPointSize(20);
+        label11->setFont(font1);
+        label11->move(150,200);
+        lineedit->move(150,300);
+        label11->setText("YOU HAVE 5 ATTEMPTS LEFT");
+        dell10=1;
+        dell11=1;
+        delle=1;
+        this->addWidget(label10);
+        this->addWidget(label11);
+        this->addWidget(lineedit);
+    }
     this->addItem(cave);
 
 }
-
-
 void Background::on_button1_clicked()
 {
     setScene("north");
@@ -266,7 +295,10 @@ void Background::on_button4_clicked()
     setScene("west");
 }
 
+void Background::on_button5_clicked()
+{
 
+}
 void Background::clearBackground(){
     RoomA->setBrush(Qt::white);
     RoomB->setBrush(Qt::white);
@@ -298,6 +330,11 @@ void Background::clearBackground(){
     {
         button4->deleteLater();
         delB4=0;
+    }
+    if(delB5)
+    {
+        button5->deleteLater();
+        delB5=0;
     }
     if(dell1)
     {
@@ -338,6 +375,26 @@ void Background::clearBackground(){
     {
         label8->deleteLater();
         dell8=0;
+    }
+    if(dell9)
+    {
+        label9->deleteLater();
+        dell9=0;
+    }
+    if(dell10)
+    {
+        label10->deleteLater();
+        dell10=0;
+    }
+    if(dell11)
+    {
+        label11->deleteLater();
+        dell11=0;
+    }
+    if(delle)
+    {
+        lineedit->deleteLater();
+        delle=0;
     }
     if(zork1->currentRoom->ghostInRoom()){
         this->removeItem(zork1->vghost);

@@ -30,7 +30,8 @@
 #include <QLabel>
 #include <QFont>
 #include "zork.h"
-#include <QMessageBox>
+#include <QLineEdit>
+#include <QWidget>
 
 class Background : public QGraphicsScene
 {
@@ -56,22 +57,21 @@ public slots:
     void on_button2_clicked();
     void on_button3_clicked();
     void on_button4_clicked();
-
+    void on_button5_clicked();
 
 private:
     QMessageBox msgBox;
     QString inventoryContString;
     Zork* zork1;
     QGraphicsPixmapItem *cave;
-    QString inventoryString;
     QTextEdit * smallEditor;
-    QTextEdit * inventoryEditor;
     Room * nextRoom;
     Player * player;
     int delB1=0;
     int delB2=0;
     int delB3=0;
     int delB4=0;
+    int delB5=0;
     int dell1=0;
     int dell2=0;
     int dell3=0;
@@ -80,10 +80,15 @@ private:
     int dell6=0;
     int dell7=0;
     int dell8=0;
+    int dell9=0;
+    int dell10=0;
+    int dell11=0;
+    int delle=0;
     QPushButton * button1;
     QPushButton * button2;
     QPushButton * button3;
     QPushButton * button4;
+    QPushButton * button5;
     QLabel * label1;
     QLabel * label2;
     QLabel * label3;
@@ -92,6 +97,10 @@ private:
     QLabel * label6;
     QLabel * label7;
     QLabel * label8;
+    QLabel * label9;
+    QLabel * label10;
+    QLabel * label11;
+    QLineEdit * lineedit;
     MyTimer * timer;
     QGraphicsRectItem *RoomA,*RoomB,*RoomC,*RoomD,*RoomE,*RoomF,*RoomG,*RoomH,*RoomI,*RoomJ;
 };

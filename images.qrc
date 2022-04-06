@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/Images">
-        <file>cave.jpg</file>
         <file>ghost.png</file>
         <file>ghostattack.png</file>
         <file>vampire.jpg</file>
@@ -17,6 +16,7 @@
         <file>pirate.png</file>
         <file>pirateattack.png</file>
         <file>monsterattack.jpg</file>
+        <file>cave.jpg</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

@@ -522,6 +522,8 @@ debug/moc_background.cpp: background.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h \
 		debug/moc_predefs.h \
 		../../../../Qt/6.2.3/mingw_64/bin/moc.exe
 	C:\Qt\6.2.3\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/jaidu/Desktop/zork2/debug/moc_predefs.h -IC:/Qt/6.2.3/mingw_64/mkspecs/win32-g++ -IC:/Users/jaidu/Desktop/zork2 -IC:/Qt/6.2.3/mingw_64/include -IC:/Qt/6.2.3/mingw_64/include/QtWidgets -IC:/Qt/6.2.3/mingw_64/include/QtGui -IC:/Qt/6.2.3/mingw_64/include/QtCore -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include background.h -o debug\moc_background.cpp
@@ -1274,7 +1276,9 @@ debug/alien.o: alien.cpp alien.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\alien.o alien.cpp
 
 debug/background.o: background.cpp background.h \
@@ -1594,7 +1598,9 @@ debug/background.o: background.cpp background.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\background.o background.cpp
 
 debug/character.o: character.cpp character.h \
@@ -2043,7 +2049,9 @@ debug/dragon.o: dragon.cpp dragon.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\dragon.o dragon.cpp
 
 debug/ghost.o: ghost.cpp ghost.h \
@@ -2363,7 +2371,9 @@ debug/ghost.o: ghost.cpp ghost.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ghost.o ghost.cpp
 
 debug/main.o: main.cpp ../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QApplication \
@@ -2690,7 +2700,9 @@ debug/main.o: main.cpp ../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QApplicat
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLabel \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlabel.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpicture.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtGui/QFont
+		../../../../Qt/6.2.3/mingw_64/include/QtGui/QFont \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o main.cpp
 
 debug/mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -3173,7 +3185,9 @@ debug/monster.o: monster.cpp monster.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\monster.o monster.cpp
 
 debug/mummy.o: mummy.cpp mummy.h \
@@ -3493,7 +3507,9 @@ debug/mummy.o: mummy.cpp mummy.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mummy.o mummy.cpp
 
 debug/mytimer.o: mytimer.cpp mytimer.h \
@@ -3814,6 +3830,8 @@ debug/mytimer.o: mytimer.cpp mytimer.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtCore/QSignalMapper
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mytimer.o mytimer.cpp
 
@@ -4134,7 +4152,9 @@ debug/pirate.o: pirate.cpp pirate.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\pirate.o pirate.cpp
 
 debug/player.o: player.cpp player.h \
@@ -4673,7 +4693,9 @@ debug/vampire.o: vampire.cpp vampire.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\vampire.o vampire.cpp
 
 debug/zombie.o: zombie.cpp zombie.h \
@@ -4993,7 +5015,9 @@ debug/zombie.o: zombie.cpp zombie.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt/6.2.3/mingw_64/include/QtGui/qpainter.h \
-		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../Qt/6.2.3/mingw_64/include/QtWidgets/qlineedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\zombie.o zombie.cpp
 
 debug/zork.o: zork.cpp zork.h \
