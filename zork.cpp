@@ -14,6 +14,7 @@ Zork::Zork(QWidget *parent)
     createalien();
     createpirate();
     createmonster();
+    createking();
     currentRoom=createRooms();
     createExits();
 }
@@ -81,23 +82,26 @@ void Zork::createmonster(){
     vmonster = new monster();
 }
 
+void Zork::createking(){
+    vking = new king();
+}
 Room * Zork::createRooms(){
 
-    a= new Room("a");
+    a= new Room("KING");
 
-    b= new Room("b");
+    b= new Room("MUMMY");
 
-    c= new Room("c");
+    c= new Room("MONSTER");
 
-    d= new Room("d");
+    d= new Room("VAMPIRE");
 
-    e= new Room("e");
-    f= new Room("f");
+    e= new Room("ZOMBIE");
+    f= new Room("ALIEN");
 
-    g= new Room("g");
-    h= new Room("h");
-    i= new Room("i");
-    j= new Room("j");
+    g= new Room("DRAGON");
+    h= new Room("PIRATE");
+    i= new Room("GHOST");
+    j= new Room("ZORK");
 
     rooms+=a;
     rooms+=b;
@@ -117,6 +121,7 @@ void Zork::createExits(){
 
     //         (N, E, S, W)
     a->setExits(NULL, NULL, NULL, NULL);
+    a->setking(true);
     a->setCanEnter(false);
 
     b->setExits(g, NULL, NULL, NULL);

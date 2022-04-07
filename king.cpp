@@ -1,12 +1,12 @@
-#include "monster.h"
+#include "king.h"
 #include "spencermansion.h"
 #include <QKeyEvent>
 #include <QGraphicsScene>
 #include <QDebug>
 
-monster::monster()
+king::king()
 {
-    this->setPixmap(QPixmap(":/Images/monster.png"));
+    this->setPixmap(QPixmap(":/Images/king.jpg"));
     this->setFlag(QGraphicsItem::ItemIsFocusable);
     this->setFocus();
     this->setPos(470,200);
@@ -14,14 +14,15 @@ monster::monster()
 }
 
 
-QString monster::getImage()
+QString king::getImage()
 {
-    return ":/Images/monster.png";
+    return ":/Images/king.jpg";
+
 }
 
-int monster::move(int x){
+int king::move(int x){
     if(z==1)
-        this->setPixmap(QPixmap(":/Images/monster.png"));
+        this->setPixmap(QPixmap(":/Images/king.jpg"));
 
     if(x==0)
     {

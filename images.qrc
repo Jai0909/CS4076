@@ -17,6 +17,8 @@
         <file>pirateattack.png</file>
         <file>monsterattack.jpg</file>
         <file>cave.jpg</file>
+        <file>king.jpg</file>
+        <file>kingattack.jpg</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

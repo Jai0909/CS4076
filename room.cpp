@@ -78,6 +78,13 @@ void Room::setmonster(bool monst)
     else
         monster=false;
 }
+void Room::setking(bool kin)
+{
+    if(kin)
+        king=true;
+    else
+        king=false;
+}
 vector<string> Room::exitString()
 {
     vector<string> list;
@@ -125,6 +132,11 @@ bool Room::pirateInRoom()
 bool Room::monsterInRoom()
 {
     return monster;
+}
+
+bool Room::kingInRoom()
+{
+    return king;
 }
 
 string Room::getDescription()
@@ -236,6 +248,16 @@ bool Room::getmonsterIsDead()
 void Room::setmonsterIsDead(bool dead)
 {
     this->monsterIsDead=dead;
+}
+
+bool Room::getkingIsDead()
+{
+    return kingIsDead;
+}
+
+void Room::setkingIsDead(bool dead)
+{
+    this->kingIsDead=dead;
 }
 
 bool Room::getCanEnter()

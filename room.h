@@ -20,6 +20,7 @@ private:
     bool alien = false;
     bool pirate = false;
     bool monster = false;
+    bool king = false;
     string description;
     bool ghostIsDead=false;
     bool vampireIsDead=false;
@@ -29,6 +30,7 @@ private:
     bool alienIsDead=false;
     bool pirateIsDead=false;
     bool monsterIsDead=false;
+    bool kingIsDead=false;
     bool canEnter;
 
 public:
@@ -42,6 +44,7 @@ public:
     void setalien(bool);
     void setpirate(bool);
     void setmonster(bool);
+    void setking(bool);
     vector<string> exitString();
     string getDescription();
     bool ghostInRoom();
@@ -52,6 +55,7 @@ public:
     bool alienInRoom();
     bool pirateInRoom();
     bool monsterInRoom();
+    bool kingInRoom();
     vector<Room> rooms();
     Room* nextRoom(string direction);
     bool getghostIsDead();
@@ -70,6 +74,8 @@ public:
     void setpirateIsDead(bool dead);
     bool getmonsterIsDead();
     void setmonsterIsDead(bool dead);
+    bool getkingIsDead();
+    void setkingIsDead(bool dead);
     bool getCanEnter();
     void setCanEnter(bool);
 };

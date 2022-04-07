@@ -1,5 +1,5 @@
 #include "ghost.h"
-#include "background.h"
+#include "spencermansion.h"
 #include <QKeyEvent>
 #include <QGraphicsScene>
 #include <QDebug>

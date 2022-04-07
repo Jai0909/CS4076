@@ -1,7 +1,7 @@
 #include "mytimer.h"
 #include <QtCore>
 #include <QDebug>
-#include <background.h>
+#include <spencermansion.h>
 #include <ghost.h>
 #include <vampire.h>
 #include <zombie.h>
@@ -10,6 +10,7 @@
 #include <alien.h>
 #include <pirate.h>
 #include <monster.h>
+#include <king.h>
 #include <QSignalMapper>
 
 MyTimer::MyTimer(Character * enemy, Player * p, Room* r)
@@ -76,6 +77,10 @@ void MyTimer::villianSlot()
         if(room->monsterInRoom()==true){
             room->setmonster(false);
             room->setmonsterIsDead(true);
+        }
+        if(room->kingInRoom()==true){
+            room->setking(false);
+            room->setkingIsDead(true);
         }
         stopTimer();
         this->deleteLater();
